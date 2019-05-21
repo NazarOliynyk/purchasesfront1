@@ -1,3 +1,14 @@
+
+This project is an integral part of the whole web-application which contains both server and client parts.
+
+To run the project you need nodejs and Angular-cli version 7.3.9.
+Clone it and start the embedded server of Angular from the console 'ng serve'.
+The project itself works with the endpoints for the server part https://github.com/NazarOliynyk/purchases_back1
+that are on http://localhost:8080
+In order to see how the whole app works it is necessary to go to http://localhost:4200/
+
+
+
 # Purchasesfront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
