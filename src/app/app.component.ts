@@ -81,7 +81,7 @@ export class AppComponent implements OnInit {
     this.mainService.getPurchases(user.id, this.headersOption).
     subscribe(value => {this.purchases = value; },
       error1 => {console.log(error1);
-                 alert('Failed to load purchases'); });
+                 alert('Failed to load purchases. Your session might have expired. Try to log in.'); });
   }
 
   logInto(loginForm: HTMLFormElement) {
@@ -149,7 +149,7 @@ export class AppComponent implements OnInit {
   }
 
   deletePurchases(dateToDeleteForm) {
-    if (confirm('DO YOU REALLY WANT TO DELETE YOUR purchases of: ' + this.dateToDelete.toString() + '???')) {
+    if (confirm('DO YOU REALLY WANT TO DELETE ALL YOUR purchases of: ' + this.dateToDelete.toString() + '???')) {
 
       this.responseTransfer.date = this.dateToDelete;
       this.mainService.deleteByDate(this.user, this.responseTransfer, this.headersOption).
