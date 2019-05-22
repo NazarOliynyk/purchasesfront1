@@ -41,6 +41,7 @@ export class AppComponent implements OnInit {
       this.headersOption =
         new HttpHeaders({Authorization: localStorage.getItem('_token')});
       this.user = JSON.parse(localStorage.getItem('_userLogged'));
+      this.showDeleteUserButton = false;
       this.showPurchases = true;
       this.responseLogination = 'HELLO! You logged in as: ' + this.user.username;
       this.getPurchases(this.user);
